@@ -56,13 +56,11 @@ int	main(int ac, char **av)
 	int		pid;
 	int		i;
 	int		client_pid;
-	char	*client_pid_bytes;
 
 	if (ac == 3)
 	{
 		i = 0;
 		client_pid = getpid();
-		client_pid_bytes = (char *) &client_pid;
 		pid = ft_atoi(av[1]);
 		signal(SIGUSR1, receive_acknow);
 		while (av[2][i] != '\0')
